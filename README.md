@@ -26,7 +26,7 @@ There are 3 actions you can configure to decide what happens to a card, __on_sta
 Deployment
 -
 
-If you are moving your cards to a new list (such as "Live") after deployment, then you must use the __move_to__ option in __on_close__. Unlike __on_start__ or __on_close__, you must also specify the repo name for __move_to__.
+If you are moving your cards to a new list (such as "Live") after deployment, then you must either use the __move_to__ option in __on_close__ or specify the __move_from__ option in __on_deploy__. Unlike __on_start__ or __on_close__, you must also specify the repo name for __move_to__ and __move_from__.
 
 You indicate a deploy happened through sending a POST request to __http://foobar.com:4000/deployed/[repo-name]__. An example of a Capistrano deployment script:
 

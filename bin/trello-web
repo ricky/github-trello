@@ -34,6 +34,8 @@ on_close/on_start:
 on_deploy:
   move_to:
     [repo name]: [list id]
+  move_from:
+    [repo_name]: [list id]
   archive: true
 YAML
 

@@ -96,7 +96,9 @@ module GithubTrello
         to_update[:closed] = true
       end
 
-      if config["on_close"]["move_to"].is_a?(Hash)
+      if update_config["move_from"] and update_config["move_from"][params[:repo]]
+        target_board = update_config["move_from"][params[:repo]]
+      elsif config["on_close"]["move_to"].is_a?(Hash)
         target_board = config["on_close"]["move_to"][params[:repo]]
       else
         target_board = config["on_close"]["move_to"]
